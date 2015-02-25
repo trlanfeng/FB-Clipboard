@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="gb2312"?>
+<project ver="2.6" name="幻蓝剪贴板" libEmbed="true" icon="E:\素材\ld.ico" ProductName="幻蓝剪贴板" InternalName="幻蓝剪贴板" FileDescription="幻蓝剪贴板" FileVersion="0.1.0.15" ProductVersion="0.1.0.15" CompanyName="幻蓝阁" LegalCopyright="Copyright (C) Trlanfeng 2013" ui="win" output="幻蓝剪贴板.exe" publishDir="/Publish/">
+	<file name="main.aau" path="main.aau"/>
+	<folder name="资源文件" path="res" embed="true"/>
+</project>

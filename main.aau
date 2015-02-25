@@ -1,0 +1,179 @@
+import win.ui;
+/*DSG{{*/
+mainForm = ..win.form( right=218;bottom=407;max=false;text="幻蓝剪贴板";border="thin" )
+mainForm.add( 
+checkbox={ bottom=368;text="置顶";left=7;top=350;z=5;right=59;cls="checkbox" };
+static3={ bottom=403;nWrap=1;left=6;top=387;transparent=1;right=194;z=6;text="欢迎反馈：trlanfeng@foxmail.com";cls="static" };
+edit={ readonly=1;autohscroll=false;right=214;left=6;multiline=1;top=231;text="当复制文本后，复制的文本会加入上方列表中。点击上方列表中的文本，内容会显示在这里，并替换掉当前的剪切板内容。";z=3;bottom=338;edge=1;cls="edit" };
+button={ bottom=373;right=210;left=158;top=346;z=2;text="清空";cls="button" };
+static={ bottom=224;right=122;left=105;top=210;transparent=1;z=4;text="v";cls="static" };
+listbox={ bgcolor=16777215;bottom=216;right=215;left=25;top=5;z=1;vscroll=1;
+items={  };edge=1;cls="listbox" };
+listbox2={ disabled=1;bottom=216;right=27;left=7;
+items={  };top=5;z=7;bgcolor=16777215;edge=1;cls="listbox" }
+)
+/*}}*/
+
+for(i=1;9;1){
+	mainForm.listbox2.add(tostring(i));
+}
+
+/*
+for(i=1;9;1){
+	hkid = mainForm.reghotkey(function(id,mod,vk){
+	if (mainForm.listbox.items[i] != null) {
+		mainForm.edit.text = mainForm.listbox.items[i];
+		win.clip.write(mainForm.edit.text);
+	}
+	var stri = tostring(i);
+	},0x2,tostring(i)#);
+	if( !hkid ){
+    	win.msgbox("CTRL+"+i+"：注册失败");
+	}
+}
+*/
+hkid = mainForm.reghotkey(function(id,mod,vk){
+	if (mainForm.listbox.items[1] != null) {
+		mainForm.edit.text = mainForm.listbox.items[1];
+		win.clip.write(mainForm.edit.text);
+		//模拟按下CTRL+V，进行粘贴
+		var wsh = com.CreateObject("wscript.shell");
+		wsh.sendkeys("^v");
+	}
+},0x2,'1'#);
+if( !hkid ){ win.msgbox("CTRL+1：注册失败"); }
+hkid = mainForm.reghotkey(function(id,mod,vk){
+	if (mainForm.listbox.items[2] != null) {
+		mainForm.edit.text = mainForm.listbox.items[2];
+		win.clip.write(mainForm.edit.text);
+		//模拟按下CTRL+V，进行粘贴
+		var wsh = com.CreateObject("wscript.shell");
+		wsh.sendkeys("^v");
+	}
+},0x2,'2'#);
+if( !hkid ){ win.msgbox("CTRL+2：注册失败"); }
+hkid = mainForm.reghotkey(function(id,mod,vk){
+	if (mainForm.listbox.items[3] != null) {
+		mainForm.edit.text = mainForm.listbox.items[3];
+		win.clip.write(mainForm.edit.text);
+		//模拟按下CTRL+V，进行粘贴
+		var wsh = com.CreateObject("wscript.shell");
+		wsh.sendkeys("^v");
+	}
+},0x2,'3'#);
+if( !hkid ){ win.msgbox("CTRL+3：注册失败"); }
+hkid = mainForm.reghotkey(function(id,mod,vk){
+	if (mainForm.listbox.items[4] != null) {
+		mainForm.edit.text = mainForm.listbox.items[4];
+		win.clip.write(mainForm.edit.text);
+		//模拟按下CTRL+V，进行粘贴
+		var wsh = com.CreateObject("wscript.shell");
+		wsh.sendkeys("^v");
+	}
+},0x2,'4'#);
+if( !hkid ){ win.msgbox("CTRL+4：注册失败"); }
+hkid = mainForm.reghotkey(function(id,mod,vk){
+	if (mainForm.listbox.items[5] != null) {
+		mainForm.edit.text = mainForm.listbox.items[5];
+		win.clip.write(mainForm.edit.text);
+		//模拟按下CTRL+V，进行粘贴
+		var wsh = com.CreateObject("wscript.shell");
+		wsh.sendkeys("^v");
+	}
+},0x2,'5'#);
+if( !hkid ){ win.msgbox("CTRL+5：注册失败"); }
+hkid = mainForm.reghotkey(function(id,mod,vk){
+	if (mainForm.listbox.items[6] != null) {
+		mainForm.edit.text = mainForm.listbox.items[6];
+		win.clip.write(mainForm.edit.text);
+		//模拟按下CTRL+V，进行粘贴
+		var wsh = com.CreateObject("wscript.shell");
+		wsh.sendkeys("^v");
+	}
+},0x2,'6'#);
+if( !hkid ){ win.msgbox("CTRL+6：注册失败"); }
+hkid = mainForm.reghotkey(function(id,mod,vk){
+	if (mainForm.listbox.items[7] != null) {
+		mainForm.edit.text = mainForm.listbox.items[7];
+		win.clip.write(mainForm.edit.text);
+		//模拟按下CTRL+V，进行粘贴
+		var wsh = com.CreateObject("wscript.shell");
+		wsh.sendkeys("^v");
+	}
+},0x2,'7'#);
+if( !hkid ){ win.msgbox("CTRL+7：注册失败"); }
+hkid = mainForm.reghotkey(function(id,mod,vk){
+	if (mainForm.listbox.items[8] != null) {
+		mainForm.edit.text = mainForm.listbox.items[8];
+		win.clip.write(mainForm.edit.text);
+		//模拟按下CTRL+V，进行粘贴
+		var wsh = com.CreateObject("wscript.shell");
+		wsh.sendkeys("^v");
+	}
+},0x2,'8'#);
+if( !hkid ){ win.msgbox("CTRL+8：注册失败"); }
+hkid = mainForm.reghotkey(function(id,mod,vk){
+	if (mainForm.listbox.items[9] != null) {
+		mainForm.edit.text = mainForm.listbox.items[9];
+		win.clip.write(mainForm.edit.text);
+		//模拟按下CTRL+V，进行粘贴
+		var wsh = com.CreateObject("wscript.shell");
+		wsh.sendkeys("^v");
+	}
+},0x2,'9'#);
+if( !hkid ){ win.msgbox("CTRL+9：注册失败"); }
+
+
+mainForm.checkbox.oncommand = function(id,event){
+	//mainForm.msgbox( mainForm.checkbox.text );
+	if (mainForm.checkbox.checked == 1) {
+		win.setTopmost(mainForm.hwnd)
+	} else {
+		win.setTopmost(mainForm.hwnd,false);
+	}
+}
+
+
+import win.clip.viewer;
+
+mainForm.button.oncommand = function(id,event){
+	//mainForm.msgbox( mainForm.button.text );
+	mainForm.listbox.clear();
+}
+
+//监视剪贴板，当有新内容时加入listbox
+viewer = win.clip.viewer(mainForm);
+viewer.onDrawClipboard=function(){
+	var str = win.clip.read();
+	var j = 0;
+	for(i=1;mainForm.listbox.count;1){
+		if (str == mainForm.listbox.items[i] || str == null ) {
+			j++;
+		}
+	}
+	if ( j < 1 ) {
+		mainForm.listbox.add(str);
+	}
+}
+
+//当点击listbox时，将选中内容复制到剪贴板
+mainForm.listbox.oncommand = function(id,event){
+	if (mainForm.listbox.items[mainForm.listbox.selIndex] != null) {
+		mainForm.edit.text = mainForm.listbox.items[mainForm.listbox.selIndex];
+		win.clip.write(mainForm.edit.text);
+	}
+}
+
+
+/***
+import config;
+mainForm.bindConfig( config.mainForm,{
+	edit = "text"; //绑定edit控件的text属性值到配置文件
+	radiobutton = "checked";
+	checkbox = "checked";
+	combobox = "selIndex";
+} );
+***/
+
+mainForm.show() 
+win.loopMessage(); 
